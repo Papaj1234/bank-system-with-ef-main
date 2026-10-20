@@ -8,7 +8,7 @@ public class CurrencyCode
 {
     [Key]
     [Column("currency_code_id")]
-    public int id { get; set; }
+    public int Id { get; set; }
 
     [Column("currency_code")]
     [StringLength(5)]
