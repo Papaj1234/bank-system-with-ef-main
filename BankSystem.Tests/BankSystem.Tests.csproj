@@ -11,8 +11,9 @@
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\stylecop.json" Link="Properties\stylecop.json" />
-    <Compile Remove="Models\**" />
-    <Compile Remove="NumberGeneratorTests\**" />
+      <Compile Remove="Models\GoldAccountTests.cs" />
+      <Compile Remove="Models\SilverAccountTests.cs" />
+      <Compile Remove="NumberGeneratorTests\**" />
   </ItemGroup>
   <ItemGroup>
       <PackageReference Include="Bogus" Version="35.6.5" />
