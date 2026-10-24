@@ -75,7 +75,6 @@ public abstract class BankAccount
         this.operations.Add(new AccountCashOperation(-amount, date, note));
         this.BonusPoints += this.CalculateWithdrawRewardPoints(amount);
     }
-     
     public IList<AccountCashOperation> GetAllOperations() => this.operations.AsReadOnly();
 
     public override string ToString() => string.Create(
