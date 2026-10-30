@@ -17,8 +17,16 @@ public static class ValidationService
 
     public static bool IsEmailValid(this string email)
     {
-        return !string.IsNullOrWhiteSpace(email)
-            && MailAddress.TryCreate(email, out MailAddress? address)
-            && address.Address == email;
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            return false;
+        }
+
+        if (!MailAddress.TryCreate(email, out MailAddress? address))
+        {
+            return false;
+        }
+
+        return address.Address == email;
     }
 }
